@@ -1,0 +1,40 @@
+.text__container p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(42, 18, 18);
+}
+
+.form_container {
+    background-color: rgba(255, 203, 203, 0.893);
+
+}
+
+label {
+    color: rgb(62, 62, 62);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+
+@media (min-width: 992px) {
+    .second__form {
+        border-left: 2px dashed #cc0000;
+    }
+}
+
+.title {
+    background-color: #c76161c7;
+}
+
+button {
+    margin-block: 1.5rem;
+    background-color: #c76161c7;
+    padding: 10px 15px;
+    border: 1px solid #cc0000;
+}
+
+input,
+textarea {
+    background-color: rgb(187, 187, 187);
+}
