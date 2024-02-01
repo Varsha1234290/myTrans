@@ -1,0 +1,14 @@
+.container th,th{
+    text-align: center;
+}
+/* .container td{
+    text-align: center;
+} */
+
+.table_end{
+    margin-bottom: 2rem;
+}
+.table_start{
+    margin-top: 20px;
+}
+
