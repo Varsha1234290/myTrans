@@ -52,7 +52,7 @@
                             <a class="nav-link " aria-current="page" href="./home.html">Home</a>
                         </li>
                         <li class="nav-item ms-1">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="#">About</a>
                         </li>
                         <li class="nav-item ms-1">
                             <a class="nav-link" href="./fleet.html">Fleet</a>
@@ -61,22 +61,19 @@
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                                 aria-expanded="false">Services</a>
                             <ul class="dropdown-menu bg-dark">
-                                <li><a class="dropdown-item" href="./OnCallWithinCity.html">On call / within city
-                                        limits</a></li>
-                                <li><a class="dropdown-item" href="./intercitylocal.html">Intercity / Local</a></li>
-                                <li><a class="dropdown-item" href="./intercity_to_city.html">Intercity / City to
-                                        City</a></li>
+                                <li><a class="dropdown-item" href="#">On call / within city limits</a></li>
+                                <li><a class="dropdown-item" href="#">Intercity / Local</a></li>
+                                <li><a class="dropdown-item" href="#">Intercity / City to City</a></li>
 
                                 <li><a class="dropdown-item" href="#">Monthly Package Module(Corporate)</a></li>
-                                <li><a class="dropdown-item" href="./MonthlyKm.html">Monthly Km Module(Corporate)</a>
-                                </li>
+                                <li><a class="dropdown-item" href="#">Monthly Km Module(Corporate)</a></li>
                             </ul>
                         </li>
                         <li class="nav-item ms-1">
-                            <a class="nav-link" href="./bookings.html">Booking</a>
+                            <a class="nav-link" href="#">Booking</a>
                         </li>
                         <li class="nav-item ms-1">
-                            <a class="nav-link" href="./ratecard.html">Rate Card</a>
+                            <a class="nav-link" href="#">Rate Card</a>
                         </li>
                         <li class="nav-item ms-1">
                             <a class="nav-link" href="#">Career</a>
@@ -88,10 +85,11 @@
                             <a class="nav-link" href="./public-opinion.html">Public Opinion</a>
                         </li>
                         <li class="nav-item ms-1">
-                            <a class="nav-link" href="./contact.html">Contact</a>
+                            <a class="nav-link" href="#">Contact</a>
                         </li>
 
                     </ul>
+
                 </div>
             </div>
         </nav>
@@ -139,29 +137,33 @@
                     <h2>Fill out the form!</h2>
                     <p>Please share your opinion with us!</p>
                 </div>
-                <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST" class="form">
+                <form action="public-opinion.php" class="form" method="post">
 
-                    <input type="text" placeholder="Name" class="form__input" id="name" name="name" />
-                    <label for="name" class="form__label">Name</label>
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="name" />
 
-                    <input type="text" placeholder="Opinion" class="form__input" id="opinion"  name="opinion"/>
-                    <label for="opinion" class="form__label">Opinion</label>
+                    <label>Opinion</label>
+                    <input type="text" name="opinion" placeholder="opinion" />
 
-                    <p>Overall feedback:</p>
-                      <input type="radio" id="fair" name="feedback" value="fair">
-                      <label for="fair">Fair</label><br>
-                      <input type="radio" id="good" name="feedback" value="good">
-                      <label for="good">Good</label><br>
-                      <input type="radio" id="better" name="feedback" value="better">
-                      <label for="better">Better</label> <br>
-                      <input type="radio" id=best name="feedback" value="best">
-                      <label for="best">Best</label>
-
+                    <label>Overall feedback</label><br>
+                    <input type="radio" name="fair" placeholder="fair" />
+                    <label>Fair</label> <br>
+                    <input type="radio" name="good" placeholder="good" />
+                    <label>Good</label> <br>
+                    <input type="radio" name="better" placeholder="better" />
+                    <label>Better</label><br>
+                    <input type="radio" name="best" placeholder="best" />
+                    <label>Best</label><br>
                     <br>
 
-                    <input type="button" value="submit" class="button p-2 px-3 m-2">
-
-                    <input type="hidden" value="true" name="hidden">
+                    <button type="Submit">Submit</button>
+                    <!-- <label>UserName</label>
+                    <input type="text" name="username" placeholder="username">
+                    <label>Email</label>
+                    <input type="text" name="email" placeholder="email">
+                    <label>Password</label>
+                    <input type="text" name="password"placeholder="password">
+                    <button>Login</button> -->
                 </form>
             </div>
 
@@ -192,24 +194,41 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-        <?php 
-if ($_POST ['hidden']) {
 
-    $name = trim($_POST['name']);
-    $name .="\n";
-
-    if($file = fopen("data.txt", "a+")){
-        fwrite($file, $name);
-    }
-
-   
-}
-
-
-?>
 </body>
 
-
-
 </html>
+<!-- <?php
 
+extract($_REQUEST);
+$file = fopen("form.txt", "a");
+fwrite($file, "name:");
+fwrite($file, $username . "\n");
+fwrite($file, "Email:");
+fwrite($file, $email . "\n");
+fwrite($file, "Password:");
+fwrite($file, $password . "\n");
+fclose($file);
+
+?>   -->
+<?php
+
+extract($_REQUEST);
+$file = fopen("opinions.txt", "a");
+fwrite($file, "Name:");
+fwrite($file, $name . "\n");
+fwrite($file, "Opinion:");
+fwrite($file, $opinion . "\n");
+fwrite($file, "Overall feedback:");
+fwrite($file, $feedback . "\n");
+fwrite($file, "Fair:");
+fwrite($file, $fair . "\n");
+fwrite($file, "Good:");
+fwrite($file, $good . "\n");
+fwrite($file, "Better:");
+fwrite($file, $better . "\n");
+fwrite($file, "Best:");
+fwrite($file, $best . "\n");
+fclose($file);
+
+?>
