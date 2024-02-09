@@ -60,12 +60,15 @@
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                                 aria-expanded="false">Services</a>
                             <ul class="dropdown-menu bg-dark">
-                                <li><a class="dropdown-item" href="./OnCallWithinCity.html">On call / within city limits</a></li>
+                                <li><a class="dropdown-item" href="./OnCallWithinCity.html">On call / within city
+                                        limits</a></li>
                                 <li><a class="dropdown-item" href="./intercitylocal.html">Intercity / Local</a></li>
-                                <li><a class="dropdown-item" href="./intercity_to_city.html">Intercity / City to City</a></li>
+                                <li><a class="dropdown-item" href="./intercity_to_city.html">Intercity / City to
+                                        City</a></li>
 
                                 <li><a class="dropdown-item" href="#">Monthly Package Module(Corporate)</a></li>
-                                <li><a class="dropdown-item" href="./MonthlyKm.html">Monthly Km Module(Corporate)</a></li>
+                                <li><a class="dropdown-item" href="./MonthlyKm.html">Monthly Km Module(Corporate)</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item ms-1">
@@ -107,7 +110,8 @@
                     <p>City to City / Intercity</p>
                 </div>
                 <div class="container mt-5 ">
-                    <form>
+
+                    <form action="bookings.php" class="form" method="post">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="from">From</label>
@@ -134,22 +138,21 @@
                             <div class="form-group col-md-6">
                                 <label>Gender</label>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gender" id="male" value="Male"
-                                        required>
+                                    <input class="form-check-input" type="radio" name="male" id="male" value="Male">
                                     <label class="form-check-label" for="male">
                                         Male
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gender" id="female"
-                                        value="Female" required>
+                                    <input class="form-check-input" type="radio" name="female" id="female"
+                                        value="Female">
                                     <label class="form-check-label" for="female">
                                         Female
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gender" id="transgender"
-                                        value="Transgender" required>
+                                    <input class="form-check-input" type="radio" name="transgender" id="transgender"
+                                        value="Transgender">
                                     <label class="form-check-label" for="transgender">
                                         Transgender
                                     </label>
@@ -180,6 +183,76 @@
                         </div>
 
                         <button type="submit">Book Request</button>
+                        <!-- <div class="form-row"> -->
+                        <!-- <label>From</label> 
+                    <input type="text"  name="from" placeholder="from"/>
+                            <div class="form-group col-md-6">
+                            <label>To</label> 
+                    <input type="text"  name="to" placeholder="to"/>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Name</label>
+                                <input type="text"  name="name" >
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="phone">Phone</label>
+                                <input type="tel"   name="phone" >
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Gender</label>
+                                <div class="form-check">
+                                    <input  type="radio" name="male"  value="Male"
+                                        required>
+                                    <label class="form-check-label" for="male">
+                                        Male
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input  type="radio" name="female" 
+                                        value="Female" >
+                                    <label class="form-check-label" for="female">
+                                        Female
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input  type="radio" name="transgender"
+                                        value="Transgender" >
+                                    <label class="form-check-label" for="transgender">
+                                        Transgender
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="pickupDate">Pickup Date</label>
+                                <input type="date"  name="pickupDate" >
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="duration">Duration (Days)</label>
+                                <input type="number"  name="duration" min="1" max="20"
+                                    >
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email">Email</label>
+                                <input type="email"  name="email" >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pickupAddress">Pickup Address</label>
+                            <textarea class="form-control" id="pickupAddress" name="pickupAddress" rows="3"
+                                ></textarea>
+                        </div>
+
+                        <button type="submit">Book Request</button> -->
                     </form>
                 </div>
             </div>
@@ -193,24 +266,24 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="from">From</label>
-                                <select class="form-control" id="from" name="from" required>
+                                <select class="form-control" id="from" name="from1" required>
                                     <option value="Pune">Pune</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="to">To</label>
-                                <input type="text" class="form-control" id="to" name="to" required>
+                                <input type="text" class="form-control" id="to" name="to1" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="name">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
+                                <input type="text" class="form-control" id="name1" name="name1" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="phone">Phone</label>
-                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                                <input type="tel" class="form-control" name="phone1" required>
                             </div>
                         </div>
 
@@ -218,54 +291,50 @@
                             <div class="form-group col-md-6">
                                 <label>Gender</label>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gender" id="male" value="Male"
-                                        required>
-                                    <label class="form-check-label" for="male">
+                                    <input class="form-check-input" type="radio" name="male1" value="Male">
+                                    <label class="form-check-label" for="male1">
                                         Male
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gender" id="female"
-                                        value="Female" required>
-                                    <label class="form-check-label" for="female">
+                                    <input class="form-check-input" type="radio" name="female1" value="Female1">
+                                    <label class="form-check-label" for="female1">
                                         Female
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gender" id="transgender"
-                                        value="Transgender" required>
-                                    <label class="form-check-label" for="transgender">
+                                    <input class="form-check-input" type="radio" name="gender" id="transgender1"
+                                        value="Transgender1">
+                                    <label class="form-check-label" for="transgender1">
                                         Transgender
                                     </label>
                                 </div>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="pickupDate">Pickup Date</label>
-                                <input type="date" class="form-control" id="pickupDate" name="pickupDate" required>
+                                <label for="pickupDates">Pickup Dates</label>
+                                <input type="date" class="form-control" name="pickupDates" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="duration">Duration (Days)</label>
-                                <input type="number" class="form-control" id="duration" name="duration" min="1" max="20"
-                                    required>
+                                <label for="duration1">Duration (Days)</label>
+                                <input type="number" class="form-control" name="duration1" min="1" max="20" required>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
+                                <label for="emails">Email</label>
+                                <input type="emails" class="form-control" id="emails" name="emails" required>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="pickupAddress">Pickup Address</label>
-                            <textarea class="form-control" id="pickupAddress" name="pickupAddress" rows="3"
-                                required></textarea>
+                            <label for="pickupAddress1">Pickup Address</label>
+                            <textarea class="form-control" name="pickupAddress1" rows="3" required></textarea>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group1">
                             <label for="dropAddress">Drop Address</label>
-                            <textarea class="form-control" id="dropAddress" name="dropAddress" rows="3"
+                            <textarea class="form-control" id="dropAddress1" name="dropAddress1" rows="3"
                                 required></textarea>
                         </div>
 
@@ -309,3 +378,65 @@
 </body>
 
 </html>
+<?php
+
+extract($_REQUEST);
+$file = fopen("intercityBookings.txt", "a");
+fwrite($file, "From:");
+fwrite($file, $from . "\n");
+fwrite($file, "To:");
+fwrite($file, $to . "\n");
+fwrite($file, "Name:");
+fwrite($file, $name . "\n");
+fwrite($file, "Phone:");
+fwrite($file, $phone . "\n");
+fwrite($file, "Gender:");
+fwrite($file, $gender . "\n");
+fwrite($file, "Male:");
+fwrite($file, $male . "\n");
+fwrite($file, "Female:");
+fwrite($file, $female . "\n");
+fwrite($file, "Transgender:");
+fwrite($file, $transgender . "\n");
+fwrite($file, "Pickup Date:");
+fwrite($file, $pickupDate . "\n");
+fwrite($file, "Duration (Days):");
+fwrite($file, $duration . "\n");
+fwrite($file, "Email:");
+fwrite($file, $email . "\n");
+fwrite($file, "Pickup Address:");
+fwrite($file, $pickupAddress . "\n");
+fclose($file);
+
+extract($_REQUEST);
+$file = fopen("withincityBookings.txt", "a");
+fwrite($file, "From:");
+fwrite($file, $from1 . "\n");
+fwrite($file, "To:");
+fwrite($file, $to1 . "\n");
+fwrite($file, "Name:");
+fwrite($file, $name1 . "\n");
+fwrite($file, "Phone:");
+fwrite($file, $phone1 . "\n");
+fwrite($file, "Gender:");
+fwrite($file, $gender1 . "\n");
+fwrite($file, "Male:");
+fwrite($file, $male1 . "\n");
+fwrite($file, "Female:");
+fwrite($file, $female1 . "\n");
+fwrite($file, "Transgender:");
+fwrite($file, $transgender1 . "\n");
+fwrite($file, "Pickup Dates:");
+fwrite($file, $pickupDates . "\n");
+fwrite($file, "Duration (Days):");
+fwrite($file, $duration1 . "\n");
+fwrite($file, "Emails:");
+fwrite($file, $emails . "\n");
+fwrite($file, "Pickup Address:");
+fwrite($file, $pickupAddress1 . "\n");
+fwrite($file, "Drop Address:");
+fwrite($file, $dropAddress1 . "\n");
+fclose($file);
+
+
+?>
